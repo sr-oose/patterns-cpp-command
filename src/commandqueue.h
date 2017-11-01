@@ -18,7 +18,7 @@ public:
 
 	void undoLastCommand(){
 		commands.at(--position)->undo();
-		commands.erase(std::end(commands));
+		commands.pop_back();
 	}
 
 	bool endReached() const {
